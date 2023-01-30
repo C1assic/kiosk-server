@@ -1,0 +1,34 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    link(rel="shortcut icon" href="/kiosk/icons/favicon.ico")
+    link(rel="icon" href="/kiosk/icons/favicon.ico")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="theme-color" content="#fff")
+    meta(name="description" content="Управление киосками")
+    
+    link(rel="manifest" href="/kiosk/manifest.json")
+    title= title
+    link(rel='stylesheet', href='/kiosk/style.css')
+  body
+    div#textContainer
+      div.content.center
+    div#videoContainer
+      div.content
+    div#imageContainer
+      div.content
+    div#error.center
+      p Error
+    div#loading.center
+      p Подключение к серверу
+      div.lds-heart 
+        div
+    div#footer Make by C1assic with ❤
+    script.
+      const kioskHash = !{`'${kioskHash}'`};
+      const mediaHash = !{`'${mediaHash || ''}'`};
+    script(src='/lib/socket.io/socket.io.min.js')
+    script(src='/lib/html-to-image/html-to-image.js')
+    script(src='/kiosk/script.js')
+    

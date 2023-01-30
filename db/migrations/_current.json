@@ -1,0 +1,102 @@
+{
+    "tables": {
+        "Kiosks": {
+            "tableName": "Kiosks",
+            "schema": {
+                "id": {
+                    "allowNull": false,
+                    "primaryKey": true,
+                    "autoIncrement": true,
+                    "field": "id",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "hash": {
+                    "allowNull": false,
+                    "unique": true,
+                    "comment": "Хэш киоска",
+                    "field": "hash",
+                    "seqType": "Sequelize.STRING(255)"
+                },
+                "name": {
+                    "allowNull": false,
+                    "unique": true,
+                    "comment": "Имя кисока",
+                    "field": "name",
+                    "seqType": "Sequelize.STRING(255)"
+                },
+                "mediaHash": {
+                    "allowNull": true,
+                    "unique": false,
+                    "comment": "Хэш медиа",
+                    "field": "mediaHash",
+                    "seqType": "Sequelize.STRING(255)"
+                },
+                "createdAt": {
+                    "allowNull": false,
+                    "field": "createdAt",
+                    "seqType": "Sequelize.DATE"
+                },
+                "updatedAt": {
+                    "allowNull": false,
+                    "field": "updatedAt",
+                    "seqType": "Sequelize.DATE"
+                }
+            },
+            "indexes": []
+        },
+        "Media": {
+            "tableName": "Media",
+            "schema": {
+                "id": {
+                    "allowNull": false,
+                    "primaryKey": true,
+                    "autoIncrement": true,
+                    "field": "id",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "hash": {
+                    "allowNull": false,
+                    "unique": true,
+                    "comment": "Хэш медиа",
+                    "field": "hash",
+                    "seqType": "Sequelize.STRING(255)"
+                },
+                "name": {
+                    "allowNull": false,
+                    "unique": true,
+                    "comment": "Имя медиа",
+                    "field": "name",
+                    "seqType": "Sequelize.STRING(255)"
+                },
+                "content": {
+                    "allowNull": false,
+                    "unique": true,
+                    "comment": "Имя файла или текст",
+                    "field": "content",
+                    "seqType": "Sequelize.STRING(1024)"
+                },
+                "type": {
+                    "allowNull": false,
+                    "comment": "Тип медиа",
+                    "field": "type",
+                    "seqType": "Sequelize.ENUM('text', 'image', 'video')"
+                },
+                "createdAt": {
+                    "allowNull": false,
+                    "field": "createdAt",
+                    "seqType": "Sequelize.DATE"
+                },
+                "updatedAt": {
+                    "allowNull": false,
+                    "field": "updatedAt",
+                    "seqType": "Sequelize.DATE"
+                }
+            },
+            "indexes": []
+        }
+    },
+    "path": "C:\\Users\\C1assic\\Desktop\\kiosk-server\\db\\migrations\\_current.json",
+    "backupPath": "C:\\Users\\C1assic\\Desktop\\kiosk-server\\db\\migrations\\_current_bak.json",
+    "exists": true,
+    "revision": 2
+}

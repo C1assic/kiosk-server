@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  include includes/nav.pug
+  div.container
+    div.row
+      div.col.s12(style="margin-top: 70px;")
+        table.highlight#table(style="table-layout: fixed;")
+          thead
+            tr
+              th Превью
+              th Имя
+              th Медиа
+          tbody
+  script(src='/lib/socket.io/socket.io.min.js')
+  script(src='/admin/out/script.js')
+
+block head
+  link(rel='stylesheet', href='/admin/style.css')

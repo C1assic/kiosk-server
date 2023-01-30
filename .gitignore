@@ -1,0 +1,13 @@
+node_modules/
+
+package-lock.json
+
+.DS_Store
+.idea/
+.settings/
+.build/
+.env
+
+db/files/*.db
+images/*.*
+videos/*.*

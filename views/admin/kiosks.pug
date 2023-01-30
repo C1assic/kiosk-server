@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  include includes/nav.pug
+  div.container
+    div.row
+      div.input-field.col.s12
+        input(placeholder="Уникальное название киоска" id="name" type="text" class="validate")
+        label(for="name") Название
+
+      div.col.s12(style="margin-top: 10px")
+        a.waves-effect.waves-light.btn#add-btn(style="float: right;")
+          i.material-icons.left add
+          i Добавить
+
+      div.col.s12(style="margin-top: 70px; overflow: auto;")
+        table.highlight#table
+          thead
+            tr
+              th Имя
+              th Хэш
+              th Действие
+          tbody
+  script(src='/admin/kiosks/script.js')
+
+block head
+  link(rel='stylesheet', href='/admin/style.css')

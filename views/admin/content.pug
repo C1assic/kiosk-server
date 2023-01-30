@@ -1,0 +1,52 @@
+extends layout
+
+block content
+  include includes/nav.pug
+  div.container
+    div.row
+      div.input-field.col.s12#name-input
+        input(placeholder="Уникальное название медиа" id="media-name" type="text" class="validate")
+        label(for="media-name") Название
+      div.input-field.col.s12.m6
+        select#content-type-select
+          option(value="" disabled selected) Выберите тип медиа
+          option(value="text") Текст
+          option(value="video") Видео
+          option(value="image") Картинка
+        label Тип медиа
+
+      div.file-field.input-field.col.s6.hide#image-input
+        div.btn
+          span Открыть
+          input(type="file" name="image")
+        div.file-path-wrapper
+          input.file-path.validate(type="text", placeholder="Загрузить файл", accept="image/*")
+      div.file-field.input-field.col.s6.hide#video-input
+        div.btn
+          span Открыть
+          input(type="file" name="video")
+        div.file-path-wrapper
+          input.file-path.validate(type="text", placeholder="Загрузить файл", accept="video/*")
+      div.input-field.col.s12.hide#text-input
+        i.material-icons.prefix mode_edit
+        textarea(id="text" class="materialize-textarea")
+        label.text(style="width: auto;") Текст
+
+      div.col.s12(style="margin-top: 10px")
+        a.waves-effect.waves-light.btn#upload-btn(style="float: right;")
+          i.material-icons.left cloud
+          i Загрузить
+
+      div.col.s12(style="margin-top: 70px; overflow: auto;")
+        table.highlight#media-table
+          thead
+            tr
+              th Имя
+              th Тип
+              th Действие
+          tbody
+
+  script(src='/admin/content/script.js')
+
+block head
+  link(rel='stylesheet', href='/admin/style.css')

@@ -1,0 +1,23 @@
+version: '3.9'
+services:
+  main:
+    build:
+      context: /
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    volumes: 
+      - db-data:/src/db/files
+      - images-data:/src/images
+      - videos-data:/src/videos
+    environment:
+      PORT: ${PORT?err}
+      SECRET: ${SECRET?err}
+      ADMIN_USERNAME: ${ADMIN_USERNAME?err}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD?err}
+    restart: unless-stopped
+
+volumes:
+  db-data:
+  images-data:
+  videos-data:

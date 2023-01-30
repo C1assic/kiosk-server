@@ -1,0 +1,18 @@
+{
+  "short_name": "Киоск",
+  "name": "Киоск",
+  "icons": [
+    {
+      "src": "icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+  ],
+  "orientation": "portrait",
+  "scope": "/kiosk/",
+  "start_url": "/kiosk/",
+  "display": "minimal-ui",
+  "theme_color": "#ee6e73",
+  "background_color": "#ffffff"
+}

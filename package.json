@@ -1,0 +1,35 @@
+{
+  "name": "express-demo",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npm run migration:migrate && node ./app",
+    "migration:make": "sequelize-mig migration:make",
+    "migration:revert": "sequelize-mig migration:undo",
+    "migration:up": "sequelize-cli db:migrate",
+    "migration:undo": "sequelize-cli db:migrate:undo",
+    "migration:migrate": "sequelize-cli db:migrate"
+  },
+  "dependencies": {
+    "body-parser": "~1.20.0",
+    "connect-sqlite3": "^0.9.13",
+    "cookie-parser": "~1.4.6",
+    "debug": "~3.2.7",
+    "dotenv": "^16.0.3",
+    "express": "~4.18.0",
+    "express-fileupload": "^1.4.0",
+    "express-session": "^1.17.3",
+    "ffmpeg": "^0.0.4",
+    "morgan": "~1.10.0",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "pug": "^3.0.2",
+    "sequelize": "^6.28.0",
+    "socket.io": "^4.5.4",
+    "sqlite3": "^5.1.4"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.0",
+    "sequelize-mig": "^3.1.3"
+  }
+}
