@@ -3,7 +3,8 @@ services:
   main:
     build: ./
     ports:
-      - 3000:3000
+      #- 3000:3000
+      - "${PORT}:${PORT}"
     volumes: 
       - db-data:/src/db/files
       - images-data:/src/images
