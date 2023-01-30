@@ -53,7 +53,7 @@
   ],
   "orientation": "portrait",
   "scope": "/admin/",
-  "start_url": "/admin/login",
+  "start_url": "/admin/",
   "display": "minimal-ui",
   "theme_color": "#ee6e73",
   "background_color": "#ffffff"
