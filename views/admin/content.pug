@@ -28,9 +28,8 @@ block content
         div.file-path-wrapper
           input.file-path.validate(type="text", placeholder="Загрузить файл", accept="video/*")
       div.input-field.col.s12.hide#text-input
-        i.material-icons.prefix mode_edit
-        textarea(id="text" class="materialize-textarea")
-        label.text(style="width: auto;") Текст
+        div#text-editor
+          p
 
       div.col.s12(style="margin-top: 10px")
         a.waves-effect.waves-light.btn#upload-btn(style="float: right;")
